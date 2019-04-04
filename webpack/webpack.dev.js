@@ -29,10 +29,20 @@ module.exports = {
       },
     ],
   },
+
   devServer: {
     contentBase: commonPaths.outputPath,
     compress: true,
     hot: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8999',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '',
+        },
+      },
+    },
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };

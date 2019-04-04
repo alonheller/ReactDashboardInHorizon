@@ -8,6 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
     "test": "jest --watchAll --coverage",
+    "noorwatch": "npm run build && sudo cp /opt/stack/reactDashboard/horizon-react/ReactDashboardInHorizon/build/js/plugin.js /opt/stack/horizon/openstack_dashboard/dashboards/reactdashboard/static/reactdashboard/js/plugin.js && sudo /opt/stack/horizon/manage.py collectstatic --no-input && sudo service apache2 restart",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -49,11 +50,19 @@
     "npm": ">=3"
   },
   "dependencies": {
+    "antd": "^3.16.1",
+    "chart.js": "^2.8.0",
+    "google-map-react": "^1.1.4",
+    "google-maps-react": "^2.0.2",
     "lodash": "4.17.11",
+    "primeicons": "^1.0.0",
+    "primereact": "^3.1.1",
     "prop-types": "15.6.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",
-    "react-hot-loader": "4.6.3"
+    "react-gmaps": "^1.9.0",
+    "react-hot-loader": "4.6.3",
+    "styled-components": "^4.2.0"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
