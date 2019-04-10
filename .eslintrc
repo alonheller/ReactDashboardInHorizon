@@ -41,6 +41,7 @@
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error",
     "react/require-default-props": 0,
+    "react/prop-types": 0,
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
     "react/jsx-boolean-value": ["warn", "never"],
@@ -48,6 +49,7 @@
     "react/jsx-curly-spacing": ["warn", "never"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".jsx"] }],
     "react/jsx-first-prop-new-line": ["warn", "multiline"],
+    "react/destructuring-assignment": ["warn", "never"],
     "react/jsx-handler-names": [
       "warn",
       {

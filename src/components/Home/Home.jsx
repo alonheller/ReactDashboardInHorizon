@@ -9,10 +9,12 @@ import DataChart from '../Charts/DataChart';
 import Gaduges from '../gaduges/gaduges';
 // import Gaduges2 from '../gaduges2/gaduges2';
 import GoogleApiWrapper from '../Map/MapWidget';
+import HeaderCard from '../HeaderCard/HeaderCard';
 
 const Wrapper = styled.div`
   padding: 1%;
 `;
+
 const Container = styled.div`
   margin: 2%;
   width: 45%;
@@ -27,6 +29,15 @@ const TableContainer = styled.div`
 const Row = styled.div`
   display: flex;
 `;
+const CardContainer = styled.div`
+  width: 100%
+  border-right: 1px solid #9f9f9f;
+  border-left: 1px solid #9f9f9f;
+  padding-left: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-right: 2%;
+`;
 
 class App extends Component {
   constructor(props) {
@@ -37,6 +48,34 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <Row>
+          <CardContainer>
+            <HeaderCard
+              title="Servers"
+              number="50"
+              color="#66b2b5"
+              icon="fas fa-server fa-3x"
+            />
+            <HeaderCard
+              title="Data Bases"
+              number="300"
+              color="#f47b73"
+              icon="fas fa-layer-group fa-3x"
+            />
+            <HeaderCard
+              title="Vms"
+              number="8,500"
+              color="#fbad4b"
+              icon="fas fa-cubes fa-3x"
+            />
+            <HeaderCard
+              title="Users"
+              color="#72d8ff"
+              number="10"
+              icon="fas fa-user fa-3x"
+            />
+          </CardContainer>
+        </Row>
         <Row>
           <TableContainer>
             <AlarmsList />
