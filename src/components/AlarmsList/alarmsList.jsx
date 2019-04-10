@@ -43,18 +43,6 @@ class AlarmsList extends Component {
           severity: 'high',
           resourceType: 'nova.host',
         },
-        {
-          created: '2019-03-29 12:01:47',
-          name: 'Alarm 7',
-          severity: 'high',
-          resourceType: 'nova.host',
-        },
-        {
-          created: '2019-03-29 12:01:47',
-          name: 'Alarm 8',
-          severity: 'high',
-          resourceType: 'nova.host',
-        },
       ],
     };
   }

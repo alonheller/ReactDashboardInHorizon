@@ -19,13 +19,13 @@ class Gaduges extends Component {
     return (
       <Container>
         <Wrapper>
-          <Progress width={200} type="circle" percent={75} />
+          <Progress width={150} type="circle" percent={75} />
         </Wrapper>
         <Wrapper>
-          <Progress width={200} type="circle" percent={70} status="exception" />
+          <Progress width={150} type="circle" percent={70} status="exception" />
         </Wrapper>
         <Wrapper>
-          <Progress width={200} type="circle" percent={100} />
+          <Progress width={150} type="circle" percent={100} />
         </Wrapper>
       </Container>
     );

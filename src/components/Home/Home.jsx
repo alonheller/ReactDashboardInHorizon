@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import AlarmsList from '../AlarmsList/alarmsList';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import DataChart from '../Charts/DataChart';
 import Gaduges from '../gaduges/gaduges';
+// import Gaduges2 from '../gaduges2/gaduges2';
 import GoogleApiWrapper from '../Map/MapWidget';
 
 const Wrapper = styled.div`
@@ -15,8 +17,8 @@ const Container = styled.div`
   margin: 2%;
   width: 45%;
   border-radius: 4px;
-  border: solid 1px #dddddd;
-  background-color: #ffffff;
+  border: solid 1px #bebebe;
+  background-color: #fbfbfb;
 `;
 const TableContainer = styled.div`
   margin: 2%;
@@ -50,6 +52,10 @@ class App extends Component {
           <Container>
             <GoogleApiWrapper />
           </Container>
+        </Row>
+        <Row>
+          <Container>{/* <Gaduges2 /> */}</Container>
+          <Container>11</Container>
         </Row>
       </Wrapper>
     );
