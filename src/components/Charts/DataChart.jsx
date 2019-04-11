@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Chart } from 'primereact/chart';
 import { TabMenu } from 'primereact/tabmenu';
+import { inject, observer } from 'mobx-react';
 
+@inject('Store')
+@observer
 class DataChart extends Component {
   constructor() {
     super();
@@ -16,9 +19,11 @@ class DataChart extends Component {
   }
 
   render() {
+    const { Store } = this.props;
+    console.log('kkkk', Store.selectedAlarm);
     const { activeItem } = this.state;
     console.log(activeItem);
-    const data = {
+    const data1 = {
       labels: ['A', 'B', 'C'],
       datasets: [
         {
@@ -31,6 +36,27 @@ class DataChart extends Component {
         },
       ],
     };
+    const data2 = {
+      labels: ['A', 'B', 'C', 'D', 'E', 'F'],
+      datasets: [
+        {
+          data: [700, 600, 500, 450, 200, 150],
+          backgroundColor: [
+            '#EC407A',
+            '#AB47BC',
+            '#7E57C2',
+            '#66BB6A',
+            '#FFCA28',
+            '#26A69A',
+          ],
+          fill: false,
+          borderColor: 'transparent',
+          label: 'vitrage statistics',
+          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        },
+      ],
+    };
+    const data = this.props.Store.selectedAlarm ? data1 : data2;
     const { items } = this.state;
     return (
       <div>

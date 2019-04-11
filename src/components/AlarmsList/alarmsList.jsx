@@ -4,6 +4,7 @@ import { Column } from 'primereact/column';
 import { Tag } from 'antd';
 import './alarmList.css';
 import styled from 'styled-components';
+import { inject, observer } from 'mobx-react';
 
 const HeaderCardIcon = styled.span`
   height: 10px;
@@ -13,6 +14,8 @@ const Icon = styled.i`
   color: #4174ff;
 `;
 
+@inject('Store')
+@observer
 class AlarmsList extends Component {
   constructor(props) {
     super(props);
@@ -107,10 +110,16 @@ class AlarmsList extends Component {
   };
 
   render() {
+    const { Store } = this.props;
     const { alarms } = this.state;
-
     return (
-      <DataTable value={alarms} rowClassName={this.rowClassName}>
+      <DataTable
+        value={alarms}
+        rowClassName={this.rowClassName}
+        selectionMode="single"
+        selection={Store.selectedAlarm}
+        onSelectionChange={() => Store.addAlarm()}
+      >
         <Column field="name" header="Name" />
         <Column field="created" header="Created" />
         <Column
