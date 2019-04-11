@@ -6,7 +6,7 @@ class DataChart extends Component {
   constructor() {
     super();
     this.state = {
-      activeItem: null,
+      activeItem: 'Bar Chart',
       items: [
         { label: 'Bar Chart', icon: 'fas fa-chart-bar' },
         { label: 'Pie Chart', icon: 'fas fa-chart-pie' },
@@ -17,6 +17,7 @@ class DataChart extends Component {
 
   render() {
     const { activeItem } = this.state;
+    console.log(activeItem);
     const data = {
       labels: ['A', 'B', 'C'],
       datasets: [
@@ -58,7 +59,6 @@ class DataChart extends Component {
         break;
       case 'Line Chart':
         newData.datasets[0].borderColor = '#42A5F5';
-        console.log(newData);
         content = <Chart type="line" data={newData} />;
         break;
       default:
