@@ -11,7 +11,7 @@
     "noorwatch": "npm run build && sudo cp /opt/stack/reactDashboard/horizon-react/ReactDashboardInHorizon/build/js/plugin.js /opt/stack/horizon/openstack_dashboard/dashboards/reactdashboard/static/reactdashboard/js/plugin.js && sudo /opt/stack/horizon/manage.py collectstatic --no-input && sudo service apache2 restart",
     "precommit": "lint-staged",
     "horizon": "cd ~/workspace/horizon && tox -e runserver",
-    "alonwatch": "npm run build && sudo cp ~/workspace/ReactDashboardInHorizon/build/js/plugin.js ~/workspace/horizon/openstack_dashboard/dashboards/reactdashboard/static/reactdashboard/js/plugin.js && sudo ~/workspace/horizon/manage.py collectstatic --no-input"
+    "alonwatch": "npm run build && cp ~/workspace/ReactDashboardInHorizon/build/js/plugin.js ~/workspace/horizon/openstack_dashboard/dashboards/reactdashboard/static/reactdashboard/js/plugin.js && ~/workspace/horizon/manage.py collectstatic --no-input"
   },
   "lint-staged": {
     "*.{js,jsx,css,md}": [
