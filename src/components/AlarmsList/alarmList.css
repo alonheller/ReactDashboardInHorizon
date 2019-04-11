@@ -1,0 +1,12 @@
+.p-column-title {
+  color: white !important;
+}
+
+table > thead > tr > th {
+  background-color: #00655b !important;
+}
+
+.ant-tag {
+  width: 100%;
+  text-align: center;
+}
