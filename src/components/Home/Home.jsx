@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import styled from 'styled-components';
+// import { Button } from 'primereact/button';
+// import { Redirect } from 'react-router-dom';
 import AlarmsList from '../AlarmsList/alarmsList';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
@@ -45,7 +47,16 @@ class App extends Component {
     this.state = {};
   }
 
+  // handleSubmit = () => {
+  //   this.setState({
+  //     toDashboard: true,
+  //   });
+  // };
+
   render() {
+    // if (this.state.toDashboard === true) {
+    //   return <Redirect to="/map" />;
+    // }
     return (
       <Wrapper>
         <Row>
@@ -94,7 +105,7 @@ class App extends Component {
         </Row>
         <Row>
           <Container>{/* <Gaduges2 /> */}</Container>
-          <Container>11</Container>
+          <Container>dddddddddddddd</Container>
         </Row>
       </Wrapper>
     );
