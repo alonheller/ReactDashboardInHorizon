@@ -5,6 +5,7 @@ import { Tag } from 'antd';
 import './alarmList.css';
 import styled from 'styled-components';
 import { inject, observer } from 'mobx-react';
+import { Widget } from '../Widget/Widget';
 
 const HeaderCardIcon = styled.span`
   height: 10px;
@@ -113,28 +114,30 @@ class AlarmsList extends Component {
     const { Store } = this.props;
     const { alarms } = this.state;
     return (
-      <DataTable
-        value={alarms}
-        rowClassName={this.rowClassName}
-        selectionMode="single"
-        selection={Store.selectedAlarm}
-        onSelectionChange={() => Store.addAlarm()}
-      >
-        <Column field="name" header="Name" />
-        <Column field="created" header="Created" />
-        <Column
-          style={{ width: '6em' }}
-          header="Severity"
-          field="severity"
-          body={this.severityTemplate}
-        />
-        <Column
-          field="resourceType"
-          header="Resource"
-          style={{ width: '9em' }}
-          body={this.resourceTemplate}
-        />
-      </DataTable>
+      <Widget>
+        <DataTable
+          value={alarms}
+          rowClassName={this.rowClassName}
+          selectionMode="single"
+          selection={Store.selectedAlarm}
+          onSelectionChange={() => Store.addAlarm()}
+        >
+          <Column field="name" header="Name" />
+          <Column field="created" header="Created" />
+          <Column
+            style={{ width: '6em' }}
+            header="Severity"
+            field="severity"
+            body={this.severityTemplate}
+          />
+          <Column
+            field="resourceType"
+            header="Resource"
+            style={{ width: '9em' }}
+            body={this.resourceTemplate}
+          />
+        </DataTable>
+      </Widget>
     );
   }
 }

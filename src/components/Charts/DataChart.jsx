@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Chart } from 'primereact/chart';
 import { TabMenu } from 'primereact/tabmenu';
 import { inject, observer } from 'mobx-react';
+import { Widget } from '../Widget/Widget';
 
 @inject('Store')
 @observer
 class DataChart extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       activeItem: 'Bar Chart',
       items: [
@@ -59,7 +60,7 @@ class DataChart extends Component {
     const data = this.props.Store.selectedAlarm ? data1 : data2;
     const { items } = this.state;
     return (
-      <div>
+      <Widget>
         <div className="content-section implementation">
           <TabMenu
             model={items}
@@ -68,7 +69,7 @@ class DataChart extends Component {
           />
           {this.detectChartType(data)}
         </div>
-      </div>
+      </Widget>
     );
   }
 

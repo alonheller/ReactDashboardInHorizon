@@ -7,9 +7,8 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import DataChart from '../Charts/DataChart';
 import Gaduges from '../gaduges/gaduges';
-// import Gaduges2 from '../gaduges2/gaduges2';
-// import GoogleApiWrapper from '../Map/MapWidget';
 import HeaderCard from '../HeaderCard/HeaderCard';
+import { Widget } from '../Widget/Widget';
 
 const Grid = styled.div`
   display: grid;
@@ -17,16 +16,16 @@ const Grid = styled.div`
     'widget-cards widget-cards widget-cards widget-cards widget-cards widget-cards'
     'widget-table widget-table widget-table widget-chart widget-chart widget-chart'
     'widget-gauges widget-gauges widget-gauges widget-chart widget-chart widget-chart';
-  grid-gap: 10px;
+  grid-gap: 15px;
   background-color: #f5f5f5;
   padding: 10px;
   grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
   height: 100%;
 `;
 
-const CardsContainer = styled.div`
-  grid-area: widget-cards;
-`;
+const widgetStyle = {
+  'grid-area': 'widget-cards',
+};
 
 const AlarmsContainer = styled.div`
   grid-area: widget-table;
@@ -40,34 +39,6 @@ const GaugesContainer = styled.div`
   grid-area: widget-gauges;
 `;
 
-/* const Wrapper = styled.div`
-  padding: 1%;
-`;
-
-const Container = styled.div`
-  margin: 2%;
-  width: 45%;
-  border-radius: 4px;
-  border: solid 1px #bebebe;
-  background-color: #fbfbfb;
-`;
-const TableContainer = styled.div`
-  margin: 2%;
-  width: 45%;
-`;
-const Row = styled.div`
-  display: flex;
-`;
-const CardContainer = styled.div`
-  width: 100%
-  border-right: 1px solid #9f9f9f;
-  border-left: 1px solid #9f9f9f;
-  padding-left: 1%;
-  margin-left: 2%;
-  margin-right: 2%;
-  padding-right: 2%;
-`; */
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -77,32 +48,34 @@ class App extends Component {
   render() {
     return (
       <Grid>
-        <CardsContainer>
-          <HeaderCard
-            title="Servers"
-            number="50"
-            color="#66b2b5"
-            icon="fas fa-server fa-3x"
-          />
-          <HeaderCard
-            title="Data Bases"
-            number="300"
-            color="#f47b73"
-            icon="fas fa-layer-group fa-3x"
-          />
-          <HeaderCard
-            title="Vms"
-            number="8,500"
-            color="#fbad4b"
-            icon="fas fa-cubes fa-3x"
-          />
-          <HeaderCard
-            title="Users"
-            color="#72d8ff"
-            number="10"
-            icon="fas fa-user fa-3x"
-          />
-        </CardsContainer>
+        <div style={widgetStyle}>
+          <Widget>
+            <HeaderCard
+              title="Servers"
+              number="50"
+              color="#66b2b5"
+              icon="fas fa-server fa-3x"
+            />
+            <HeaderCard
+              title="Data Bases"
+              number="300"
+              color="#f47b73"
+              icon="fas fa-layer-group fa-3x"
+            />
+            <HeaderCard
+              title="Vms"
+              number="8,500"
+              color="#fbad4b"
+              icon="fas fa-cubes fa-3x"
+            />
+            <HeaderCard
+              title="Users"
+              color="#72d8ff"
+              number="10"
+              icon="fas fa-user fa-3x"
+            />
+          </Widget>
+        </div>
 
         <AlarmsContainer>
           <AlarmsList />
