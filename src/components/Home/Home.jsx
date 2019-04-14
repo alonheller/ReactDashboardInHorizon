@@ -8,10 +8,39 @@ import 'primeicons/primeicons.css';
 import DataChart from '../Charts/DataChart';
 import Gaduges from '../gaduges/gaduges';
 // import Gaduges2 from '../gaduges2/gaduges2';
-import GoogleApiWrapper from '../Map/MapWidget';
+// import GoogleApiWrapper from '../Map/MapWidget';
 import HeaderCard from '../HeaderCard/HeaderCard';
 
-const Wrapper = styled.div`
+const Grid = styled.div`
+  display: grid;
+  grid-template-areas:
+    'widget-cards widget-cards widget-cards widget-cards widget-cards widget-cards'
+    'widget-table widget-table widget-table widget-chart widget-chart widget-chart'
+    'widget-gauges widget-gauges widget-gauges widget-chart widget-chart widget-chart';
+  grid-gap: 10px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+  height: 100%;
+`;
+
+const CardsContainer = styled.div`
+  grid-area: widget-cards;
+`;
+
+const AlarmsContainer = styled.div`
+  grid-area: widget-table;
+`;
+
+const ChartContainer = styled.div`
+  grid-area: widget-chart;
+`;
+
+const GaugesContainer = styled.div`
+  grid-area: widget-gauges;
+`;
+
+/* const Wrapper = styled.div`
   padding: 1%;
 `;
 
@@ -37,7 +66,7 @@ const CardContainer = styled.div`
   margin-left: 2%;
   margin-right: 2%;
   padding-right: 2%;
-`;
+`; */
 
 class App extends Component {
   constructor(props) {
@@ -47,56 +76,46 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <Row>
-          <CardContainer>
-            <HeaderCard
-              title="Servers"
-              number="50"
-              color="#66b2b5"
-              icon="fas fa-server fa-3x"
-            />
-            <HeaderCard
-              title="Data Bases"
-              number="300"
-              color="#f47b73"
-              icon="fas fa-layer-group fa-3x"
-            />
-            <HeaderCard
-              title="Vms"
-              number="8,500"
-              color="#fbad4b"
-              icon="fas fa-cubes fa-3x"
-            />
-            <HeaderCard
-              title="Users"
-              color="#72d8ff"
-              number="10"
-              icon="fas fa-user fa-3x"
-            />
-          </CardContainer>
-        </Row>
-        <Row>
-          <TableContainer>
-            <AlarmsList />
-          </TableContainer>
-          <Container>
-            <DataChart />
-          </Container>
-        </Row>
-        <Row>
-          <Container>
-            <Gaduges />
-          </Container>
-          <Container>
-            <GoogleApiWrapper />
-          </Container>
-        </Row>
-        <Row>
-          <Container>{/* <Gaduges2 /> */}</Container>
-          <Container>11</Container>
-        </Row>
-      </Wrapper>
+      <Grid>
+        <CardsContainer>
+          <HeaderCard
+            title="Servers"
+            number="50"
+            color="#66b2b5"
+            icon="fas fa-server fa-3x"
+          />
+          <HeaderCard
+            title="Data Bases"
+            number="300"
+            color="#f47b73"
+            icon="fas fa-layer-group fa-3x"
+          />
+          <HeaderCard
+            title="Vms"
+            number="8,500"
+            color="#fbad4b"
+            icon="fas fa-cubes fa-3x"
+          />
+          <HeaderCard
+            title="Users"
+            color="#72d8ff"
+            number="10"
+            icon="fas fa-user fa-3x"
+          />
+        </CardsContainer>
+
+        <AlarmsContainer>
+          <AlarmsList />
+        </AlarmsContainer>
+
+        <ChartContainer>
+          <DataChart />
+        </ChartContainer>
+
+        <GaugesContainer>
+          <Gaduges />
+        </GaugesContainer>
+      </Grid>
     );
   }
 }

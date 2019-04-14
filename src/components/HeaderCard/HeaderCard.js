@@ -18,7 +18,7 @@ const HeaderCardData = styled.div`
 `;
 
 const HeaderCardTitle = styled.div`
-  width: 64px;
+  width: 100px;
   height: 21px;
   font-family: 'Roboto';
   font-size: 18px;
