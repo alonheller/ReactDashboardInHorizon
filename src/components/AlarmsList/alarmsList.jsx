@@ -114,7 +114,7 @@ class AlarmsList extends Component {
     const { Store } = this.props;
     const { alarms } = this.state;
     return (
-      <Widget>
+      <Widget title="Alarms">
         <DataTable
           id="alarm-table"
           value={alarms}

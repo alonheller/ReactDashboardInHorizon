@@ -58,7 +58,7 @@ class DataChart extends Component {
     const data = this.props.Store.selectedAlarm ? data1 : data2;
     const { items } = this.state;
     return (
-      <Widget>
+      <Widget title="Statistics">
         <div className="content-section implementation">
           <TabMenu
             model={items}

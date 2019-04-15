@@ -53,7 +53,7 @@ class App extends Component {
     return (
       <Grid>
         <div style={widgetStyle}>
-          <Widget>
+          <Widget title="RealTime Monitor">
             <Content>
               <HeaderCard
                 title="Servers"
