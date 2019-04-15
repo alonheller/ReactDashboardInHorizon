@@ -15,7 +15,7 @@ const Container = styled.div`
 class Gaduges extends Component {
   render() {
     return (
-      <Widget>
+      <Widget title="Status">
         <Container>
           <Progress
             strokeWidth={7}

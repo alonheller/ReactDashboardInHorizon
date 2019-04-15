@@ -21,9 +21,10 @@ const Title = styled.div`
 
 export class Widget extends Component {
   render() {
+    const { title } = this.props;
     return (
       <Container id="container">
-        <Title id="title">RealTime Monitor</Title>
+        <Title id="title">{title}</Title>
         {this.props.children}
       </Container>
     );
