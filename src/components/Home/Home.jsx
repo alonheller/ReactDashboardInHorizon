@@ -41,6 +41,7 @@ const GaugesContainer = styled.div`
 const Content = styled.div`
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 class App extends Component {

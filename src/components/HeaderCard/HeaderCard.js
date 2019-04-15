@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const HeaderCardWrapper = styled.div`
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  min-width: 280px;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 90px;
   border: solid 1px #aeaeae;
   background-color: ${props => props.color};
-  padding-right: 2%;
-  padding-top: 1%;
-  padding-left: 2%;
-  display: flex;
-  width: 22%;
-  margin-left: 2%;
   box-shadow: 5px 5px 5px #aeaeae;
   &:hover {
     box-shadow: 1px 1px 8px 3px #aeaeae;
@@ -19,6 +19,7 @@ const HeaderCardWrapper = styled.div`
 
 const HeaderCardData = styled.div`
   display: block;
+  margin-top: 12px;
 `;
 
 const HeaderCardTitle = styled.div`

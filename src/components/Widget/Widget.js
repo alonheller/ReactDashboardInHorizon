@@ -18,7 +18,7 @@ const Title = styled.div`
   text-align: left;
   font-size: 18px;
   padding: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 `;
 
 export class Widget extends Component {
