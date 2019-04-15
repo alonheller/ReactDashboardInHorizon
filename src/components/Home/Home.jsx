@@ -17,7 +17,6 @@ const Grid = styled.div`
     'widget-table widget-table widget-table widget-chart widget-chart widget-chart'
     'widget-gauges widget-gauges widget-gauges widget-chart widget-chart widget-chart';
   grid-gap: 15px;
-  background-color: #f5f5f5;
   height: 100%;
   padding: 0;
   gap: 20px 20px;
@@ -41,6 +40,7 @@ const GaugesContainer = styled.div`
 `;
 const Content = styled.div`
   display: flex;
+  justify-content: space-around;
 `;
 
 class App extends Component {

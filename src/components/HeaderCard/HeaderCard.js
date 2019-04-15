@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const HeaderCardWrapper = styled.div`
   height: 90px;
-  border: solid 1px #dbdbdb;
+  border: solid 1px #aeaeae;
   background-color: ${props => props.color};
   padding-right: 2%;
   padding-top: 1%;
@@ -11,11 +11,14 @@ const HeaderCardWrapper = styled.div`
   display: flex;
   width: 22%;
   margin-left: 2%;
+  box-shadow: 5px 5px 5px #aeaeae;
+  &:hover {
+    box-shadow: 1px 1px 8px 3px #aeaeae;
+  }
 `;
 
 const HeaderCardData = styled.div`
   display: block;
-  width: 90%;
 `;
 
 const HeaderCardTitle = styled.div`
@@ -32,7 +35,6 @@ const HeaderCardTitle = styled.div`
 `;
 
 const HeaderCardIcon = styled.span`
-  width: 10%;
   height: 30px;
   margin-top: 17px;
 `;
