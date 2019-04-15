@@ -14,9 +14,11 @@ const Container = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 26px;
-  margin-bottom: 10px;
-  text-align: center;
+  background: #ecebeb;
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 12px;
 `;
 
 export class Widget extends Component {
