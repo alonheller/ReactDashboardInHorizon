@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Progress } from 'antd';
 import styled from 'styled-components';
+import { inject, observer } from 'mobx-react';
 import { Widget } from '../Widget/Widget';
 import 'antd/dist/antd.css';
 
@@ -9,6 +10,8 @@ const Container = styled.div`
   justify-content: space-around;
 `;
 
+@inject('Store')
+@observer
 class Gaduges extends Component {
   render() {
     return (
@@ -18,14 +21,14 @@ class Gaduges extends Component {
             strokeWidth={7}
             width={150}
             type="circle"
-            percent={75}
+            percent={this.props.Store.selectedAlarm ? 75 : 100}
             strokeLinecap="square"
           />
           <Progress
             strokeWidth={7}
             width={150}
             type="circle"
-            percent={70}
+            percent={this.props.Store.selectedAlarm ? 70 : 30}
             status="exception"
             strokeLinecap="square"
           />
@@ -33,7 +36,7 @@ class Gaduges extends Component {
             strokeWidth={7}
             width={150}
             type="circle"
-            percent={100}
+            percent={this.props.Store.selectedAlarm ? 100 : 50}
             strokeLinecap="square"
           />
         </Container>

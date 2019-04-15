@@ -20,10 +20,7 @@ class DataChart extends Component {
   }
 
   render() {
-    const { Store } = this.props;
-    console.log('kkkk', Store.selectedAlarm);
     const { activeItem } = this.state;
-    console.log(activeItem);
     const data1 = {
       labels: ['A', 'B', 'C'],
       datasets: [

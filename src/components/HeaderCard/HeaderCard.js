@@ -8,13 +8,14 @@ const HeaderCardWrapper = styled.div`
   padding-right: 2%;
   padding-top: 1%;
   padding-left: 2%;
-  float: left;
+  display: flex;
   width: 22%;
   margin-left: 2%;
 `;
 
 const HeaderCardData = styled.div`
-  float: left;
+  display: block;
+  width: 90%;
 `;
 
 const HeaderCardTitle = styled.div`
@@ -31,9 +32,8 @@ const HeaderCardTitle = styled.div`
 `;
 
 const HeaderCardIcon = styled.span`
-  width: 30px;
+  width: 10%;
   height: 30px;
-  float: right;
   margin-top: 17px;
 `;
 

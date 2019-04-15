@@ -38,6 +38,9 @@ const ChartContainer = styled.div`
 const GaugesContainer = styled.div`
   grid-area: widget-gauges;
 `;
+const Content = styled.div`
+  display: flex;
+`;
 
 class App extends Component {
   constructor(props) {
@@ -50,30 +53,32 @@ class App extends Component {
       <Grid>
         <div style={widgetStyle}>
           <Widget>
-            <HeaderCard
-              title="Servers"
-              number="50"
-              color="#66b2b5"
-              icon="fas fa-server fa-3x"
-            />
-            <HeaderCard
-              title="Data Bases"
-              number="300"
-              color="#f47b73"
-              icon="fas fa-layer-group fa-3x"
-            />
-            <HeaderCard
-              title="Vms"
-              number="8,500"
-              color="#fbad4b"
-              icon="fas fa-cubes fa-3x"
-            />
-            <HeaderCard
-              title="Users"
-              color="#72d8ff"
-              number="10"
-              icon="fas fa-user fa-3x"
-            />
+            <Content>
+              <HeaderCard
+                title="Servers"
+                number="50"
+                color="#66b2b5"
+                icon="fas fa-server fa-3x"
+              />
+              <HeaderCard
+                title="Data Bases"
+                number="300"
+                color="#f47b73"
+                icon="fas fa-layer-group fa-3x"
+              />
+              <HeaderCard
+                title="Vms"
+                number="8,500"
+                color="#fbad4b"
+                icon="fas fa-cubes fa-3x"
+              />
+              <HeaderCard
+                title="Users"
+                color="#72d8ff"
+                number="10"
+                icon="fas fa-user fa-3x"
+              />
+            </Content>
           </Widget>
         </div>
 
