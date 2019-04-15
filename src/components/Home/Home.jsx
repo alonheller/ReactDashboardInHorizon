@@ -18,9 +18,10 @@ const Grid = styled.div`
     'widget-gauges widget-gauges widget-gauges widget-chart widget-chart widget-chart';
   grid-gap: 15px;
   background-color: #f5f5f5;
-  padding: 10px;
-  grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
   height: 100%;
+  padding: 0;
+  gap: 20px 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 `;
 
 const widgetStyle = {

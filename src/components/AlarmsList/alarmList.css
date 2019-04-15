@@ -3,10 +3,14 @@
 }
 
 table > thead > tr > th {
-  background-color: #00655b !important;
+  background-color: #7d7d7d !important;
 }
 
 .ant-tag {
   width: 100%;
   text-align: center;
+}
+
+#alarm-table {
+  padding: 0 10px;
 }

@@ -3,6 +3,7 @@ import { Chart } from 'primereact/chart';
 import { TabMenu } from 'primereact/tabmenu';
 import { inject, observer } from 'mobx-react';
 import { Widget } from '../Widget/Widget';
+import './datachart.css';
 
 @inject('Store')
 @observer

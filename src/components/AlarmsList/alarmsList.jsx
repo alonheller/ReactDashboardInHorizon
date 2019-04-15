@@ -116,6 +116,7 @@ class AlarmsList extends Component {
     return (
       <Widget>
         <DataTable
+          id="alarm-table"
           value={alarms}
           rowClassName={this.rowClassName}
           selectionMode="single"
