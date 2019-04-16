@@ -1,17 +1,17 @@
-import { action, autorun, observable } from 'mobx';
+import { action, observable } from 'mobx';
 
 class Store {
   @observable selectedAlarm = false;
 
+  @observable currentAlarm = false;
+
   @action
-  addAlarm = () => {
+  addAlarm = alarm => {
+    this.currentAlarm = alarm;
     this.selectedAlarm = !this.selectedAlarm;
   };
 }
 
 const store = new Store();
-autorun(() => {
-  console.log(store.selectedAlarm);
-});
 
 export default store;

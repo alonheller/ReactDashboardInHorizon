@@ -120,8 +120,8 @@ class AlarmsList extends Component {
           value={alarms}
           rowClassName={this.rowClassName}
           selectionMode="single"
-          selection={Store.selectedAlarm}
-          onSelectionChange={() => Store.addAlarm()}
+          selection={Store.currentAlarm}
+          onSelectionChange={e => Store.addAlarm(e.value)}
         >
           <Column field="name" header="Name" />
           <Column field="created" header="Created" />
