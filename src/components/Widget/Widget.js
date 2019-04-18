@@ -8,7 +8,6 @@ const Container = styled.div`
   border-radius: 3px;
   -webkit-box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0);
   -moz-box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: 5px 5px 5px #aeaeae;
   &:hover {
     box-shadow: 1px 1px 8px 3px #aeaeae;
   }
@@ -18,7 +17,6 @@ const Title = styled.div`
   background: #4a90e2;
   text-align: left;
   font-size: 18px;
-  height: 38px;
   border-radius: 3px;
   font-family: 'Roboto';
   font-size: 20px;

@@ -1,3 +1,6 @@
 .implementation {
-    padding: 0 10px;
+  padding: 0 10px;
+}
+.bordered {
+  border: solid 2px #4a90e2 !important;
 }

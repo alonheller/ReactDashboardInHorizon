@@ -1,14 +1,22 @@
 .p-column-title {
-  color: white !important;
+  color: #4a4a4a !important;
 }
 
 table > thead > tr > th {
-  background-color: #7d7d7d !important;
+  border: none !important;
+  background: #ffffff !important;
+  text-align: start !important;
+  border-bottom: solid 1px #e0e0e0 !important;
+}
+
+.p-datatable-tbody > tr > td {
+  border: none !important;
 }
 
 .ant-tag {
   width: 100%;
   text-align: center;
+  border-radius: 12px !important;
 }
 
 #alarm-table {

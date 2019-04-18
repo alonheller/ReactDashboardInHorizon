@@ -12,7 +12,7 @@ const HeaderCardIcon = styled.span`
 `;
 
 const Icon = styled.i`
-  color: #4174ff;
+  color: #4a4a4a;
 `;
 
 @inject('Store')
@@ -124,7 +124,7 @@ class AlarmsList extends Component {
           onSelectionChange={e => Store.addAlarm(e.value)}
         >
           <Column field="name" header="Name" />
-          <Column field="created" header="Created" />
+          <Column style={{ width: '13em' }} field="created" header="Created" />
           <Column
             style={{ width: '6em' }}
             header="Severity"

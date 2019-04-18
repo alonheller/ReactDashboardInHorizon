@@ -80,11 +80,7 @@ class Gaduges extends Component {
   };
 
   static getDerivedStateFromProps(props, state) {
-    console.log('gggg');
-    console.log(props.Store.selectedAlarm, state.selected);
-    console.log(props.Store.selectedAlarm !== state.selected);
     if (props.Store.selectedAlarm !== state.selected) {
-      console.log('inside if');
       const min = 1;
       const max1 = 100;
       const max2 = 160;
@@ -134,7 +130,6 @@ class Gaduges extends Component {
   };
 
   handleMouseLeave = () => {
-    console.log('OUT');
     this.setState({ width1: 150, width2: 150, width3: 150 });
   };
 
