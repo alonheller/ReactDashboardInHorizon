@@ -1,5 +1,6 @@
 .implementation {
   padding: 0 10px;
+  margin-top: 15%;
 }
 .bordered {
   border: solid 2px #4a90e2 !important;

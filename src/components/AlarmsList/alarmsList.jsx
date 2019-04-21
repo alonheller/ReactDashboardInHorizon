@@ -124,7 +124,7 @@ class AlarmsList extends Component {
           onSelectionChange={e => Store.addAlarm(e.value)}
         >
           <Column field="name" header="Name" />
-          <Column style={{ width: '13em' }} field="created" header="Created" />
+          <Column style={{ width: '14em' }} field="created" header="Created" />
           <Column
             style={{ width: '6em' }}
             header="Severity"
@@ -134,7 +134,7 @@ class AlarmsList extends Component {
           <Column
             field="resourceType"
             header="Resource"
-            style={{ width: '9em' }}
+            style={{ width: '8em' }}
             body={this.resourceTemplate}
           />
         </DataTable>

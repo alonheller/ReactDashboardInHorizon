@@ -42,6 +42,7 @@ const Content = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 `;
 
 class App extends Component {

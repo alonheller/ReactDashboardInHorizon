@@ -53,7 +53,7 @@ class DataChart extends Component {
       labels: ['A', 'B', 'C', 'D', 'E', 'F'],
       datasets: [
         {
-          data: [700, 600, 500, 450, 200, 150],
+          data: [300, 100, 80, 150, 250, 200],
           backgroundColor: [
             '#EC407A',
             '#AB47BC',
