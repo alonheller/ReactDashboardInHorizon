@@ -11,7 +11,7 @@
 
 3. Place the react root html element inside dashboard's index.html .
 
-4. Clone the boilerplate repo 
+4. Clone the boilerplate repo and checkout to plugin branch 
 `git clone https://github.com/e0ne/webpack-react-boilerplate.git`
 
 5. yarn or npm install to install npm packages
