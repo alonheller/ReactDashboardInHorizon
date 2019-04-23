@@ -6,9 +6,9 @@
 1. Create new dashboard as shown in openstack horizon documentation [openstack documentation](https://docs.openstack.org/horizon/latest/contributor/tutorials/dashboard.html)
 
 2. Place Babel , React and React-Dom scripts files inside dashboard javascript statics folder .
-`<script src="{{STATIC_URL}}reactdashboard/js/react.development.js"></script>`
-`<script src="{{STATIC_URL}}reactdashboard/js/react-dom.development.js"></script>`
-`<script src="{{STATIC_URL}}reactdashboard/js/babel.min.js"></script>`
+`<script src="{{STATIC_URL}}reactdashboard/js/react.development.js"></script>`             
+`<script src="{{STATIC_URL}}reactdashboard/js/react-dom.development.js"></script>`         
+`<script src="{{STATIC_URL}}reactdashboard/js/babel.min.js"></script>`                       
 
 3. Add the React and React-Dom scripts to dashboard's index.html file .
 
